@@ -7,12 +7,7 @@
 body{
     display: flex;
     justify-content: center;
-    width: 100%;
-}
-
-.contenedor-tarjeta{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    
 }
 
 .navbar-pinterest{
@@ -44,7 +39,6 @@ body{
 
 input{
     position: absolute;
-    display: flex;
     left: 250px;
     flex-direction: row;
     border-radius: 30px;
@@ -53,10 +47,14 @@ input{
     border: 2px gray solid;
 }
 
+.contenedor-tarjeta{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 
 .tarjeta{
     position:relative;
-    top: 40px;
+    top: 80px;
     width: 200px;
     border-radius: 30px;
     overflow: hidden;
@@ -86,11 +84,18 @@ input{
     right: 10px;  
     cursor: pointer;     
 }
+
+
 .tarjeta-info:hover{
     opacity: 1;
 }
 
 .img-fluid{
     width: 100%;
-    display: flex;
+    height: 100%;
+}
+
+@media screen and (max-width: 664px) {
+    .contenedor-tarjeta (
+        grid-template-columns: repeat(3, 1fr);)
 }
